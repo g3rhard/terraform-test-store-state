@@ -4,8 +4,8 @@ provider "aws" {
   profile                 = "terraform"
 }
 
-resource "aws_s3_bucket" "terraform_state_g3_test" {
-  bucket = "terraform-up-and-running-state"
+resource "aws_s3_bucket" "terraform_state" {
+  bucket = "terraform-up-and-running-state-g3-regain-backery-algorhytm"
   # Enable versioning so we can see the full revision history of our
   # state files
   versioning {
