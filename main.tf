@@ -43,6 +43,11 @@ resource "aws_dynamodb_table" "terraform_locks" {
   }
 }
 
+resource "aws_instance" "example" {
+  ami           = "ami-0c55b159cbfafe1f0"
+  instance_type = "t3.micro"
+}
+
 output "s3_bucket_arn" {
   # TODO: Fix value warning "Unknown token: 48:17 IDENT aws_s3_bucket.terraform_state.arn"
   value       = aws_s3_bucket.terraform_state.arn
